@@ -48,9 +48,11 @@ public class MariaEduardaApplication implements CommandLineRunner {
 
         Cliente cli1 = new  Cliente(null, "Maria Eduarda", "12245678908", "limamaduhferreira@gmail.com", 
                 TipoCliente.PESSOAFISICA);
-        Cliente cli2 = new  Cliente();
+        Cliente cli2 = new  Cliente(null, "Isabelle", "08756432412", "isabellesegatto10@gmail.com",
+        		TipoCliente.PESSOAFISICA);
         cli1.getTelefones().addAll(Arrays.asList("24000002345", "12124354987"));
-        cli2.getTelefones().addAll(Arrays.asList("44444567789", "00000987656"));
+        cli1.getTelefones().addAll(Arrays.asList("44444567789", "00000987656"));
+        cli2.getTelefones().addAll(Arrays.asList("78798750278", "00036782479"));
         clienteRepository.saveAll(Arrays.asList(cli1,cli2));
 
         Endereco e1 = new Endereco(null, "Rua Gonçalves Dias", "435","", "Tabajaras", "38400288",cli1,c1);
